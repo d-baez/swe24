@@ -1,64 +1,58 @@
-// validateAddress.js
-const SmartyStreetsSDK = require("smartystreets-javascript-sdk");
-const SmartyStreetsCore = SmartyStreetsSDK.core;
-const Lookup = SmartyStreetsSDK.usStreet.Lookup;
-const dotenv = require('dotenv');
+require('dotenv').config(); // Load environment variables from .env file
+const fetch = require('node-fetch'); // Use fetch for HTTP requests
 
-// Load environment variables
-dotenv.config();
+const validateAddress = async (address) => {
+  const authId = process.env.SMARTYSTREETS_AUTH_ID; // Load from .env
+  const authToken = process.env.SMARTYSTREETS_AUTH_TOKEN; // Load from .env
 
-// Setup SmartyStreets API credentials from environment variables
-const authId = process.env.SMARTYSTREETS_AUTH_ID;
-const authToken = process.env.SMARTYSTREETS_AUTH_TOKEN;
+  if (!authId || !authToken) {
+    console.error('Error: Missing SMARTYSTREETS_AUTH_ID or SMARTYSTREETS_AUTH_TOKEN in .env');
+    return -1; // Missing authentication
+  }
 
-let clientBuilder = new SmartyStreetsCore.ClientBuilder(new SmartyStreetsCore.StaticCredentials(authId, authToken));
-let client = clientBuilder.buildUsStreetApiClient();
+  const baseUrl = 'https://us-street.api.smartystreets.com/street-address';
 
-// Main function to validate address
-async function addressValidation_controller(address) {
-    try {
-        const result = await validateAddress(address);
-        console.log(result); // Output will be 1 if the address is valid
-        return result;
-    } catch (error) {
-        console.error(error);
-        return -1; // Return -1 if the address is invalid
+  // Build the query string with parameters
+  const queryParams = new URLSearchParams({
+    street: address.line1,
+    city: address.city,
+    state: address.state,
+    'auth-id': authId,
+    'auth-token': authToken,
+  });
+
+  try {
+    // Make the GET request
+    const response = await fetch(`${baseUrl}?${queryParams.toString()}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    // Handle the response
+    if (!response.ok) {
+      console.error(`Error: ${response.status} - ${response.statusText}`);
+      return -1; // Address validation failed
     }
-}
 
-// Address validation logic
-async function validateAddress(address) {
-    let lookup = new Lookup();
-    lookup.street = address.line1;
-    lookup.city = address.city;
-    lookup.state = address.state;
-    lookup.maxCandidates = 10; // Max candidates to return
+    const result = await response.json();
 
-    try {
-        // Send the request to SmartyStreets API
-        let response = await client.send(lookup);
-        return handleSuccess(response);
-    } catch (error) {
-        return handleError(error);
+    // Check if the address is valid
+    if (result.length > 0 && result[0].metadata) {
+      const dpvMatchCode = result[0].metadata.dpv_match_code;
+
+      // Match codes: 'Y', 'S', 'D' indicate valid addresses
+      if (['Y', 'S', 'D'].includes(dpvMatchCode)) {
+        return 1; // Valid address
+      }
     }
-}
 
-// Success handler after receiving a response from SmartyStreets
-async function handleSuccess(response) {
-    let lookup = response.lookups[0];
-    // Print the results
-    lookup.result.map(candidate => console.log(`${candidate.deliveryLine1}, ${candidate.lastLine}`));
-    if (lookup.result.length > 0) {
-        return 1; // Return 1 if a valid address is found
-    } else {
-        return -1; // Return -1 if no valid address is found
-    }
-}
+    return -1; // Invalid address
+  } catch (error) {
+    console.error('Error during address validation:', error);
+    return -1; // Return -1 on error
+  }
+};
 
-// Error handler
-async function handleError(response) {
-    console.log(response);
-    return -1; // Return -1 if an error occurs
-}
-
-module.exports = { addressValidation_controller };
+module.exports = { validateAddress };
