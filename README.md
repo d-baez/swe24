@@ -2,7 +2,7 @@
 repo for our SWE project
 
 Project description:
-Online sunglass shop 
+Online sunglasses shop 
 
 WonderLens
 vision through the looking glass
