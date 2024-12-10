@@ -3,12 +3,12 @@ repository for our SWE term project
 
 
 ## Table of contents
-1. [Project Description](#description)
+1. [Project Description](#project-description)
 2. [Requirements](#requirements)
-3. [How to run the project](#How-to-run)  
+3. [How to run the project](#How-to-run-the-project)  
 
 
-## <a name="description"> Project Description: </a>
+## Project Description:
 
 
 WonderLens - Online sunglasses shopping platform  
@@ -17,7 +17,7 @@ mission statement:  vision through the looking glass
 - 
 
 
-## <a name="requirements"> Requirements: </a>
+## Requirements:
 - PayPal sandbox account
   - developer account, create an api and copy the client id and secret id
 - Smarty streets account for address validation
@@ -25,7 +25,7 @@ mission statement:  vision through the looking glass
   - https://smartystreets.com/docs/cloud/us-street-api
 - MySQL workbench
 
-## <a name="How-to-run">How to run the project: </a>
+## How to run the project:
 1. Clone / download the repository
    1. open and update public/.env file with your details for the [requirements](#requirements)
       1. **note** this file may only be viewable with and IDE 
@@ -33,9 +33,10 @@ mission statement:  vision through the looking glass
 2. Open the terminal and navigate to the project directory
 3. Run the following command:
     ```
-        http-server 
+    http-server 
     ```
-4. Open the browser and navigate to the following URL given from running the previous command Ex:
+4. Open the browser and navigate to the following URL given from running the previous command. 
+ <br>Example:
     ``` 
     Available on:
       http://127.0.0.1:8080
