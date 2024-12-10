@@ -1,0 +1,64 @@
+h1, h2 {
+    font-size: 2rem;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+section{
+    margin: 0px -25px 0px -25px;
+}
+
+#user-section, #products-section, #checkout-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+#product-list div {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+
+footer {
+    background-color: lightblue;
+    color: rgb(9, 123, 123);
+    text-align: center;
+    padding: 15px;
+}

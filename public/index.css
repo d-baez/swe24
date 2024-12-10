@@ -1,0 +1,133 @@
+/*general*/
+h1, h2 {
+    font-size: 2rem;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+section{
+    margin: 0px -25px 0px -25px;
+}
+
+/*index.html (home page)*/
+.split-section {
+    display: flex;
+    height: 300px; /* Full viewport height */
+  }
+
+  /* Left section with the image */
+  .split-section .left {
+    flex: 1; /* Takes up 50% of the space */
+    background: url('/Users/elisabeth/Documents/GitHub/swe24/public/images/product_1.jpg') center/cover no-repeat; /* Replace with your image URL */
+  }
+
+  /* Right section with centered text */
+  .split-section .right {
+    flex: 1; /* Takes up 50% of the space */
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    background-color: #f4f4f4; /* Optional background color */
+    text-align: center; /* Center text within the block */
+    font-family: cursive;
+  }
+
+  /* Text styling */
+  .split-section .right h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  .split-section .right p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%; /* Adjust to fit the page width */
+    margin: auto;
+    overflow: hidden;
+  }
+
+  /* Slides */
+  .slide {
+    display: none; /* Hide slides by default */
+    text-align: center;
+    background-color: #ddd;
+  }
+
+  /* Image styling */
+  .slide img {
+    width: 500px;
+    height: auto;
+  }
+
+  /* Navigation buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    user-select: none;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  /* Dots navigation */
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+}
+
+
+footer {
+    background-color: lightblue;
+    color: rgb(9, 123, 123);
+    text-align: center;
+    padding: 15px;
+}

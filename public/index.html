@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WonderLens - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="button.css">
 </head>
 <body>
 <header>
@@ -17,23 +18,65 @@
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
+    <link rel="stylesheet" href="header.css">
 </header>
+
+
 <main style="padding: 25px">
-    <section class="featured-products">
-        <h2>Featured Products</h2>
-        <!-- Sample product -->
-        <div class="product">
-            <img src="public/images/product_1.jpg" alt="Stylish Eyeglasses">
-            <h3>Stylish Eyeglasses</h3>
+    <section class="split-section">
+        <div class="left"></div>
+        <div class="right">
+            <div>
+                <h2 class="catchphrase">Vision Through the Looking Glass</h2>
+                <p>View the world with a sense of wonder.</p>
+                <button><a href="#shop" class="cta-button">Shop Now</a> </button>
+            </div>
+        </div>
+    </section>
+
+    <h2>Featured Products</h2>
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_2.jpg" alt="Slide 1">
+          <h3>Stylish Eyeglasses</h3>
             <p>$199.99</p>
             <button>Add to Cart</button>
         </div>
-    </section>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_3.jpg" alt="Slide 2">
+          <h3>Stylish Eyeglasses</h3>
+            <p>$199.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_4.jpg" alt="Slide 3">
+          <h3>Stylish Eyeglasses</h3>
+            <p>$199.99</p>
+            <button>Add to Cart</button>
+        </div>
+    
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    
+      <!-- Dots navigation -->
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      
+    
 </main>
 <footer>
     <p>Copyright © 2024 WonderLens</p>
 </footer>
 <script src="app.js"></script>
 <script src="js/populateProducts.js"></script>
+<script src="slideshow.js"></script>
 </body>
 </html>
