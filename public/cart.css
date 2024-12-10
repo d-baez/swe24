@@ -51,15 +51,48 @@ input, button {
     text-align: center;
 }
 
-#cart-items {
-    margin-bottom: 20px;
+
+.cart-items{
+    display: flex;
+    justify-content: space-between; /* Space between image and button */
+    align-items: center; /* Vertically centers content */
+    height: 150px; /* Set the height of the container */
+    padding: 0 10px; /* Optional padding for spacing */
+    background-color: aliceblue;
+    width: 95%;
+    margin: auto;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
 }
 
+
+.cart-items img{
+    height: 130px;
+    width: auto;
+    padding-top: 0px;
+}
+
+.cart-items button {
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Font size for the button text */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+
+.cart-items h3{
+    font-size: 2em;
+}
+
+
+.cart-items .price{
+    color: rgb(251, 100, 173);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.5em;
+}
 
 footer {
     background-color: lightblue;
     color: rgb(9, 123, 123);
     text-align: center;
-    padding: 25px;
-    position:fixed;bottom:0;left:0;right:0;height:30px;
+    padding: 15px;
 }

@@ -8,9 +8,19 @@
 </head>
 <body>
 <header>
-    <h1>Register</h1>
+    <h1 id="logo">˙˖𝓌𝑜𝓃𝒹𝑒𝓇𝐿𝑒𝓃𝓈˖⋆࿐໋₊ </h1>
+    <nav class = "nav-box">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <link rel="stylesheet" href="header.css">
 </header>
 <main>
+    <h1>Register</h1>
     <form id="register-form" method="POST" action="/api/users/register">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
