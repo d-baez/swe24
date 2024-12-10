@@ -5,7 +5,7 @@ repository for our SWE term project
 ## Table of contents
 1. [Project Description](#description)
 2. [Requirements](#requirements)
-3. [How to run the project](#How to run the project)  
+3. [How to run the project](#How-to-run)  
 
 
 ## <a name="description"> Project Description: </a>
@@ -25,7 +25,7 @@ mission statement:  vision through the looking glass
   - https://smartystreets.com/docs/cloud/us-street-api
 - MySQL workbench
 
-## <a name="How to run the project">How to run the project: </a>
+## <a name="How-to-run">How to run the project: </a>
 1. Clone / download the repository
    1. open and update public/.env file with your details for the [requirements](#requirements)
       1. **note** this file may only be viewable with and IDE 
