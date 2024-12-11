@@ -9,10 +9,8 @@ repository for our SWE term project
 
 
 ## Project Description:
-
-
-WonderLens - Online sunglasses shopping platform  
-mission statement:  vision through the looking glass
+**WonderLens - Online sunglasses shopping platform**  
+*vision through the looking glass*
 - The platform will allow users to browse and purchase sunglasses  
 - 
 
