@@ -18,6 +18,7 @@ repository for our SWE term project
 ## Requirements:
 - PayPal sandbox account
   - developer account, create an API, and copy the client ID and secret ID
+  - https://developer.paypal.com/api/rest/
 - Smarty Streets account for address validation
   - Create an account and get an API key
   - https://smartystreets.com/docs/cloud/us-street-api
