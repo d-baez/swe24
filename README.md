@@ -17,23 +17,23 @@ repository for our SWE term project
 
 ## Requirements:
 - PayPal sandbox account
-  - developer account, create an api and copy the client id and secret id
-- Smarty streets account for address validation
+  - developer account, create an API, and copy the client ID and secret ID
+- Smarty Streets account for address validation
   - Create an account and get an API key
   - https://smartystreets.com/docs/cloud/us-street-api
-- MySQL workbench
+- MySQL Workbench
 
 ## How to run the project:
 1. Clone / download the repository
    1. open and update public/.env file with your details for the [requirements](#requirements)
-      1. **note** this file may only be viewable with and IDE 
+      1. **note** this file may only be viewable with an IDE 
    2. make sure you have your MySQL server running
 2. Open the terminal and navigate to the project directory
 3. Run the following command:
     ```
     http-server 
     ```
-4. Open the browser and navigate to the following URL given from running the previous command. 
+4. Open the browser and navigate to the following URL from running the previous command. 
  <br>Example:
     ``` 
     Available on:
