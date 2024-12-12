@@ -24,52 +24,54 @@
 
 <main style="padding: 25px">
     <section class="split-section">
-        <div class="left"></div>
-        <div class="right">
             <div>
                 <h2 class="catchphrase">Vision Through the Looking Glass</h2>
                 <p>View the world with a sense of wonder.</p>
                 <button><a href="products.html" class="cta-button">Shop Now</a> </button>
             </div>
-        </div>
     </section>
 
-    <h2>Featured Products</h2>
-    <div class="slideshow-container">
-        <!-- Slide 1 -->
-        <div class="slide">
-          <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_2.jpg" alt="Slide 1">
-          <h3>Stylish Eyeglasses</h3>
-            <p>$199.99</p>
-            <button>Add to Cart</button>
+    <section class="big-picture">
+
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide">
+            <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_2.jpg" alt="Slide 1">
+            <h3>Stylish Eyeglasses</h3>
+                <p>$199.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+            <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_3.jpg" alt="Slide 2">
+            <h3>Stylish Eyeglasses</h3>
+                <p>$199.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+            <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_4.jpg" alt="Slide 3">
+            <h3>Stylish Eyeglasses</h3>
+                <p>$199.99</p>
+                <button>Add to Cart</button>
+            </div>
+        
+            <!-- Navigation buttons -->
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
-        <!-- Slide 2 -->
-        <div class="slide">
-          <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_3.jpg" alt="Slide 2">
-          <h3>Stylish Eyeglasses</h3>
-            <p>$199.99</p>
-            <button>Add to Cart</button>
+        
+        <!-- Dots navigation -->
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-        <!-- Slide 3 -->
-        <div class="slide">
-          <img src="/Users/elisabeth/Documents/GitHub/swe24/public/images/product_4.jpg" alt="Slide 3">
-          <h3>Stylish Eyeglasses</h3>
-            <p>$199.99</p>
-            <button>Add to Cart</button>
-        </div>
-    
-        <!-- Navigation buttons -->
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
-      </div>
-    
-      <!-- Dots navigation -->
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-      
+      </section>
     
 </main>
 <footer>

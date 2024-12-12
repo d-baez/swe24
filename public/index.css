@@ -15,48 +15,65 @@ section{
 
 /*index.html (home page)*/
 .split-section {
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url('/Users/elisabeth/Documents/GitHub/swe24/public/images/wonderlenshome.gif');
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: -25px;
+    left: -25px;
     display: flex;
-    height: 300px; /* Full viewport height */
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
 
-  /* Left section with the image */
-  .split-section .left {
-    flex: 1; /* Takes up 50% of the space */
-    background: url('/Users/elisabeth/Documents/GitHub/swe24/public/images/product_1.jpg') center/cover no-repeat; /* Replace with your image URL */
+  .split-section div{
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 50%;
   }
 
-  /* Right section with centered text */
-  .split-section .right {
-    flex: 1; /* Takes up 50% of the space */
+  .big-picture {
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url('/Users/elisabeth/Documents/GitHub/swe24/public/images/product_9.jpg');
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: -50px;
+    left: -25px;
     display: flex;
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    background-color: #f4f4f4; /* Optional background color */
-    text-align: center; /* Center text within the block */
-    font-family: cursive;
   }
 
-  /* Text styling */
-  .split-section .right h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-
-  .split-section .right p {
-    font-size: 1.2rem;
-    color: #666;
+  .featured-products{
+    width: 70%;
+    margin: auto;
+    background-image: linear-gradient(rgb(202, 255, 255), white);
     margin-top: 10px;
-    line-height: 1.5;
+    margin-bottom: 25px;
+    border-radius: 20px;
   }
-
-
 
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 100%; /* Adjust to fit the page width */
+    max-width: 50%; /* Adjust to fit the page width */
     margin: auto;
     overflow: hidden;
+  }
+
+  .slideshow-container button{
+    margin-bottom: 10px;
   }
 
   /* Slides */
@@ -64,6 +81,7 @@ section{
     display: none; /* Hide slides by default */
     text-align: center;
     background-color: #ddd;
+    margin-bottom: 50px;
   }
 
   /* Image styling */
