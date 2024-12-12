@@ -39,6 +39,21 @@ section{
     top: 50%;
   }
 
+  .split-section h2{
+    font-size: 50px;
+  }
+
+  .split-section p{
+    font-size: 20px;
+    font-family: fantasy;
+  }
+
+  .split-section button{
+    height: 50px;
+    width: 100px;
+    font-size: 1em;
+  }
+
   .big-picture {
     color: white;
     margin: 0;
@@ -53,6 +68,24 @@ section{
     top: -50px;
     left: -25px;
     display: flex;
+  }
+
+  .big-picture div{
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 50%;
+    color: white;
+  }
+
+  .big-picture h2{
+    font-size: 50px;
+  }
+
+  .big-picture a{
+    color: white;
+    font-size: 20px;
+    font-family: fantasy;
   }
 
   .featured-products{
@@ -80,14 +113,20 @@ section{
   .slide {
     display: none; /* Hide slides by default */
     text-align: center;
-    background-color: #ddd;
+    background-color: white;
     margin-bottom: 50px;
+    border-radius: 10px;
+    font-family: fantasy;
   }
 
   /* Image styling */
   .slide img {
-    width: 500px;
+    width: 75%;
     height: auto;
+  }
+
+  .slide p{
+    color: rgb(251, 100, 173);
   }
 
   /* Navigation buttons */
