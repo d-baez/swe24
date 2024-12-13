@@ -10,21 +10,21 @@ const PORT = process.env.PORT || 3000;
 
 // Test database connection
 connectDB()
-    .then(() => console.log('Database connection successful.'))
-    .catch((error) => {
-      console.error('Database connection failed:', error.message);
-      process.exit(1); // Exit the process if the connection fails
-    });
+  .then(() => console.log('Database connection successful.'))
+  .catch((error) => {
+    console.error('Database connection failed:', error.message);
+    process.exit(1); // Exit the process if the connection fails
+  });
 
 // Middlewares
 app.use(cors({ origin: 'http://127.0.0.1:8080', credentials: true }));
 app.use(express.json());
 app.use(
-    session({
-      secret: process.env.SESSION_SECRET || 'default_secret',
-      resave: false,
-      saveUninitialized: true,
-    })
+  session({
+    secret: process.env.SESSION_SECRET || 'default_secret',
+    resave: false,
+    saveUninitialized: true,
+  })
 );
 
 // Debugging Middleware
@@ -51,7 +51,7 @@ app.get('/checkout', (req, res) => res.sendFile(path.join(__dirname, 'public', '
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'public', 'login.html')));
 app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'public', 'register.html')));
 app.get('/order-status', (req, res) =>
-    res.sendFile(path.join(__dirname, 'public', 'orderStatus.html'))
+  res.sendFile(path.join(__dirname, 'public', 'orderStatus.html'))
 );
 app.get('/success', (req, res) => res.sendFile(path.join(__dirname, 'public', 'success.html')));
 
