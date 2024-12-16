@@ -31,4 +31,4 @@ const loadProducts = async (search = '', category = '') => {
     }
 };
 
-module.exports = { populateProducts };
+module.exports = { loadProducts };

@@ -1,5 +1,7 @@
 
 // Function to make an order and handle payment
+import {validateAddress} from "./validateAddress";
+
 const makeOrder = async (userId, shippingAddress) => {
     try {
         // Fetch the cart items
@@ -48,4 +50,3 @@ const makeOrder = async (userId, shippingAddress) => {
     }
 };
 
-// Function to validate address (assuming a validateAddress function exists)

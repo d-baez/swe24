@@ -18,7 +18,7 @@ section{
     color: white;
     margin: 0;
     padding: 0;
-    background-image: url('/Users/elisabeth/Documents/GitHub/swe24/public/images/wonderlenshome.gif');
+    background-image: url('/public/images/wonderlenshome.gif');
     background-size: cover;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -58,7 +58,7 @@ section{
     color: white;
     margin: 0;
     padding: 0;
-    background-image: url('/Users/elisabeth/Documents/GitHub/swe24/public/images/product_9.jpg');
+    background-image: url('/public/images/product_9.jpg');
     background-size: cover;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
