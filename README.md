@@ -12,7 +12,7 @@ repository for our SWE term project
 **WonderLens - Online sunglasses shopping platform**  
 *vision through the looking glass*
 - The platform will allow users to browse and purchase sunglasses  
-- 
+- demo link https://youtu.be/iXMZcwfyWeA?feature=shared
 
 
 ## Requirements:
